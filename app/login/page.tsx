@@ -11,7 +11,12 @@ export default function LoginPage() {
         <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', minHeight: 'calc(100vh - 200px)' }}>
             <div style={{ width: '100%', maxWidth: '400px', padding: '2rem', border: '1px solid var(--border)', borderRadius: 'var(--radius)' }}>
                 <h1 style={{ fontSize: '1.5rem', fontWeight: 700, marginBottom: '1.5rem', textAlign: 'center' }}>Sign In</h1>
-                <form action={authenticate} style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+                <form action={async (formData) => {
+                    const errorMessage = await authenticate(formData);
+                    if (errorMessage) {
+                        alert(errorMessage);
+                    }
+                }} style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
                     <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
                         <label>Email</label>
                         <input name="email" type="email" required style={{ padding: '0.75rem', borderRadius: 'var(--radius)', border: '1px solid var(--border)' }} />

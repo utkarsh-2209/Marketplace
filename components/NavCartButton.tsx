@@ -3,7 +3,7 @@
 import { useCart } from '@/context/CartContext';
 import { ShoppingBag } from 'lucide-react';
 
-export function CartButton() {
+export function NavCartButton() {
     const { itemCount, setIsOpen } = useCart();
 
     return (

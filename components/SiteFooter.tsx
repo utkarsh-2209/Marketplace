@@ -1,4 +1,4 @@
-export default function Footer() {
+export default function SiteFooter() {
     return (
         <footer style={{ borderTop: '1px solid var(--border)', padding: '2rem 0', marginTop: 'auto' }}>
             <div className="container" style={{ textAlign: 'center', color: 'var(--muted-foreground)', fontSize: '0.875rem' }}>

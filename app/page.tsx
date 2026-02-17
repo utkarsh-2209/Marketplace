@@ -46,7 +46,7 @@ export default async function Home() {
 
         <div className="grid-products">
           {products.map((product) => (
-            <Link href={`/products/${product.id}`} key={product.id} style={{ display: 'block', group: 'product-card' }}>
+            <Link href={`/products/${product.id}`} key={product.id} style={{ display: 'block' }}>
               <div style={{
                 border: '1px solid var(--border)',
                 borderRadius: 'var(--radius)',

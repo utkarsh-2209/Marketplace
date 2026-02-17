@@ -7,10 +7,10 @@ type Product = {
     id: string;
     name: string;
     price: number;
-    image: string;
+    image: string | null;
 };
 
-export default function AddToCartButton({ product }: { product: Product }) {
+export default function ProductAddToCart({ product }: { product: Product }) {
     const { addItem } = useCart();
 
     return (

@@ -1,7 +1,7 @@
 import { prisma } from '@/lib/prisma';
 import { formatCurrency } from '@/lib/utils';
 import { notFound } from 'next/navigation';
-import AddToCartButton from '@/components/AddToCartButton';
+import ProductAddToCart from '@/components/ProductAddToCart';
 
 // Force dynamic rendering to handle search params/dynamic routes if needed using params
 // Next.js 15 app router dynamic params
@@ -34,7 +34,7 @@ export default async function ProductPage({ params }: { params: Promise<{ id: st
                 </div>
                 <p style={{ color: 'var(--muted-foreground)', lineHeight: 1.6 }}>{product.description}</p>
 
-                <AddToCartButton product={product} />
+                <ProductAddToCart product={product} />
             </div>
         </div>
     );

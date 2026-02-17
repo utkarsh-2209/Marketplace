@@ -2,9 +2,9 @@ import Link from 'next/link';
 import { ShoppingBag, User as UserIcon } from 'lucide-react';
 import { useCart } from '@/context/CartContext';
 import { auth, signOut } from '@/auth';
-import { CartButton } from '@/components/CartButton';
+import { NavCartButton } from '@/components/NavCartButton';
 
-export default async function Header() {
+export default async function Navbar() {
     const session = await auth();
 
     // We need a client component for the cart button because it uses context.
@@ -43,7 +43,7 @@ export default async function Header() {
                         </Link>
                     )}
 
-                    <CartButton />
+                    <NavCartButton />
                 </nav>
             </div>
         </header>

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
+import Navbar from "@/components/Navbar";
+import SiteFooter from "@/components/SiteFooter";
 import { CartProvider } from "@/context/CartContext";
 import CartSidebar from "@/components/CartSidebar";
 
@@ -20,9 +20,9 @@ export default function RootLayout({
       <body>
         <CartProvider>
           <div style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
-            <Header />
+            <Navbar />
             <main style={{ flex: 1 }}>{children}</main>
-            <Footer />
+            <SiteFooter />
             <CartSidebar />
           </div>
         </CartProvider>
